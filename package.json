@@ -22,7 +22,7 @@
     "url": "https://github.com/SandeepK1729/jarvis/issues"
   },
   "homepage": "https://github.com/SandeepK1729/jarvis#readme",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^5.9.2"
   }
 }
