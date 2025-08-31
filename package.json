@@ -1,0 +1,35 @@
+{
+  "name": "jarvis",
+  "version": "0.0.1",
+  "description": "Jarvis is a CLI tool that lets you create custom aliases for commands and paths, so you can run complex commands using simple shortcuts.",
+  "main": "./dist/index.js",
+  "bin": {
+    "jarvis": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandeepK1729/jarvis.git"
+  },
+  "keywords": [
+    "CLI",
+    "jarvis",
+    "alias",
+    "commands"
+  ],
+  "author": "SandeepK1729",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SandeepK1729/jarvis/issues"
+  },
+  "homepage": "https://github.com/SandeepK1729/jarvis#readme",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "commander": "^14.0.0",
+    "typescript": "^5.9.2"
+  }
+}
