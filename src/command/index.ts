@@ -5,9 +5,9 @@ import {
 } from "child_process";
 import { spinner } from "@clack/prompts";
 
-import { getAliases, addAlias } from "@/datasources";
+import { getAllAliases, findAliasByName, addAlias } from "@/datasources";
 import { Alias } from "@/types";
-import { aliasInput } from "../util/";
+import { aliasInput } from "@/util";
 
 const jarvis = new Command();
 
@@ -31,7 +31,7 @@ jarvis
   .command("list")
   .description("List all aliases")
   .action(() => {
-    const aliases = getAliases();
+    const aliases = getAllAliases();
     console.table(aliases);
   });
 
@@ -42,15 +42,27 @@ jarvis
   // .option('-d, --debug', 'run command in debug mode')
   .option("-s, --silent", "run command silently")
   .action((args: string[], options) => {
-    console.debug(`With args: `, args, typeof args);
 
-    const tool = args[0];
-    const commandArgs = args.slice(1);
+    const alias = findAliasByName(args.join(' '));
+
+    if (!alias) {
+      console.error(`Alias not found: ${args.join(' ')}`);
+      process.exit(1);
+    }
+
+    // console.debug(`With args: `, args, alias.command);
+    const cmd = alias.command.split(' ');
+
+    const tool = cmd[0];
+    const commandArgs = cmd.slice(1);
 
     if (!tool) {
       console.error("Please provide a tool to run.");
       process.exit(1);
     }
+
+    console.log(`\n> Running command:`);
+    console.log(`> ${alias.command}\n`);
 
     const execOptions: SpawnOptions = options.silent
       ? { stdio: undefined }

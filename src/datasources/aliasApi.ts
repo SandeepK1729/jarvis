@@ -1,11 +1,5 @@
 import { Alias, Data } from "../types";
-import { LowSync } from "lowdb";
-import { JSONFileSyncPreset, JSONFileSync } from "lowdb/node";
-
-console.log("file loaded");
-// const db: LowSync<Data> = new LowSync(new JSONFileSync("~/.jarvisdata.json", { aliasL: {} }), {
-//   aliases: new Map<string, Alias>(),
-// });
+import { JSONFileSyncPreset } from "lowdb/node";
 
 interface IData {
   jarvis: {
@@ -16,17 +10,15 @@ const db = JSONFileSyncPreset<IData>("db.json", {
   jarvis: {},
 });
 
-console.log("DB initialized:", db.data);
-db.read();
-console.log("DB after read:", db.data);
-
-// const iterator = db.data.aliases.size + 1;
-
 /**
  * Get all command aliases.
  * @returns A list of all command aliases.
  */
-export const getAliases = (): Alias[] => Object.values(db.data.jarvis);
+export const getAllAliases = (): Alias[] => Object.values(db.data.jarvis);
+
+export const findAliasByName = (name: string): Alias | undefined => {
+  return db.data.jarvis[name];
+};
 
 /**
  * Add a new command alias.

@@ -2,6 +2,10 @@
   "display": "Node LTS (22)",
   "_version": "22.0.0",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "lib": [
       "es2024",
       "ESNext.Array",
@@ -15,7 +19,8 @@
     "noUncheckedIndexedAccess": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+    "noEmit": true
   },
   "include": ["src"],
 }
