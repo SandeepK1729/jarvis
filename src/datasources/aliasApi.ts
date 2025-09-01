@@ -1,14 +1,22 @@
-import { Alias, Data } from "../types";
 import { JSONFileSyncPreset } from "lowdb/node";
+import path from "path";
+
+import { Alias } from "@/types";
 
 interface IData {
   jarvis: {
     [key: string]: Alias
   }
 }
-const db = JSONFileSyncPreset<IData>("db.json", {
+
+const dbPath = path.join(process.env.HOME || "", "db.json");
+const db = JSONFileSyncPreset<IData>(dbPath, {
   jarvis: {},
 });
+
+console.log("database initialized", db.data);
+db.read();
+console.log("database read", db.data);
 
 /**
  * Get all command aliases.
@@ -33,13 +41,11 @@ export const addAlias = (alias: Alias): Alias => {
   return alias;
 };
 
-/**
- * Delete a command alias.
- * @param alias The alias object to delete.
- */
-export const deleteAlias = (alias: Alias): void => {
+export const deleteAliasByNames = (names: string[]) => {
   db.update(({ jarvis }) => {
-    delete jarvis[alias.alias];
+    names.forEach((name) => {
+      delete jarvis[name];
+    });
   });
 };
 

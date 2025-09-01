@@ -1,5 +1,10 @@
-import { cancel, group, text, } from "@clack/prompts";
+import { Alias } from "@/types";
+import { cancel, group, multiselect, text, } from "@clack/prompts";
 
+/**
+ * Prompts the user for an alias and command, and returns the result.
+ * @returns An object containing the alias and command.
+ */
 const aliasInput = async () => {
   const results = await group(
         {
@@ -53,4 +58,26 @@ const aliasInput = async () => {
   return { alias: results.alias.trim(), command: results.command.trim() };
 }
 
-export { aliasInput };
+/**
+ * Prompts the user to select aliases to delete.
+ * @param list The list of aliases to choose from.
+ * @returns The selected aliases.
+ */
+const selectAliasToDelete = async (list: Alias[]): Promise<string[]> => {
+  const selected = await multiselect({
+    message: 'Select aliases to delete',
+    options: list.map(({ alias, command }) => ({
+      value: alias,
+      label: alias,
+      hint: command,
+    })),
+    required: true,
+  });
+
+  if (typeof selected == "symbol")
+    return [];
+
+  return selected; 
+};
+
+export { aliasInput, selectAliasToDelete };

@@ -1,13 +1,15 @@
+import { spawn, SpawnOptions } from "child_process";
 import { Command } from "commander";
-import {
-  spawn,
-  SpawnOptions,
-} from "child_process";
 import { spinner } from "@clack/prompts";
 
-import { getAllAliases, findAliasByName, addAlias } from "@/datasources";
+import {
+  getAllAliases,
+  findAliasByName,
+  addAlias,
+  deleteAliasByNames,
+} from "@/datasources";
+import { aliasInput, selectAliasToDelete } from "@/util";
 import { Alias } from "@/types";
-import { aliasInput } from "@/util";
 
 const jarvis = new Command();
 
@@ -26,6 +28,24 @@ jarvis
   });
 
 // 2. remove alias
+jarvis
+  .command("remove")
+  .description("Remove an existing alias")
+  .action(async () => {
+    const selected = await selectAliasToDelete(getAllAliases());
+
+    if (selected.length === 0) {
+      console.log("No aliases selected for removal.");
+      return;
+    }
+
+    const s = spinner();
+    s.start(`Removing alias '${selected.join(", ")}'...`);
+
+    deleteAliasByNames(selected);
+    s.stop(`Removed alias '${selected.join(", ")}'`);
+  });
+
 // 3. list aliases
 jarvis
   .command("list")
@@ -42,16 +62,15 @@ jarvis
   // .option('-d, --debug', 'run command in debug mode')
   .option("-s, --silent", "run command silently")
   .action((args: string[], options) => {
-
-    const alias = findAliasByName(args.join(' '));
+    const alias = findAliasByName(args.join(" "));
 
     if (!alias) {
-      console.error(`Alias not found: ${args.join(' ')}`);
+      console.error(`Alias not found: ${args.join(" ")}`);
       process.exit(1);
     }
 
     // console.debug(`With args: `, args, alias.command);
-    const cmd = alias.command.split(' ');
+    const cmd = alias.command.split(" ");
 
     const tool = cmd[0];
     const commandArgs = cmd.slice(1);
@@ -70,36 +89,4 @@ jarvis
     spawn(tool, commandArgs, execOptions);
   });
 
-jarvis
-  .command("run")
-  .argument("<string...>", "command to run")
-  .action((command: string[]) => {
-    console.log("Running command:", command.join(" "));
-    if (command.length < 2) {
-      console.error("Please provide a command to run.");
-      process.exit(1);
-    }
-    const tool = command[0];
-    const args = command.slice(1);
-
-    if (!tool) {
-      console.error("Please provide a tool to run.");
-      process.exit(1);
-    }
-
-    spawn(tool, args, { stdio: "inherit" });
-  });
-
-jarvis
-  .command("join")
-  .description("Join the command-arguments into a single string")
-  .argument("<strings...>", "one or more strings")
-  .option("-s, --separator <char>", "separator character", ",")
-  .action((strings, options) => {
-    console.log(strings, typeof strings);
-    // console.table(strings);
-    console.log(strings.join(options.separator));
-  });
-
 export default jarvis;
-
