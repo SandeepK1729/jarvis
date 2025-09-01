@@ -14,10 +14,6 @@ const db = JSONFileSyncPreset<IData>(dbPath, {
   jarvis: {},
 });
 
-console.log("database initialized", db.data);
-db.read();
-console.log("database read", db.data);
-
 /**
  * Get all command aliases.
  * @returns A list of all command aliases.

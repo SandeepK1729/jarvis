@@ -69,7 +69,6 @@ jarvis
       process.exit(1);
     }
 
-    // console.debug(`With args: `, args, alias.command);
     const cmd = alias.command.split(" ");
 
     const tool = cmd[0];
