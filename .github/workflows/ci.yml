@@ -42,3 +42,89 @@ jobs:
 
       - name: Build project
         run: pnpm build
+
+      - name: Semantic Release Action
+        # You may pin to the exact commit or the version.
+        # uses: codfish/semantic-release-action@cbd853afe12037afb1306caca9d6b1ab6a58cf2a
+        # uses: codfish/semantic-release-action@v3# Recommended: Docker image digest from GitHub Container Registry (best for speed & security)
+        uses: docker://ghcr.io/codfish/semantic-release-action@sha256:4c0955361cf42e5ab9bb05df3a1e2a781c443f9760b63a68957689445051a2fb
+
+        with:
+          # The branches on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
+          branches: 'master'
+          # List of modules or file paths containing . https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#extends
+          # extends: # optional
+          # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
+          additional-packages: |
+            ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git']
+          plugins: |
+            [
+              [
+                # This plugin is responsible for analyzing the commit messages and determining the type of release to be made.
+                "@semantic-release/commit-analyzer",
+                {
+                  preset: "conventionalcommits", # using the conventionalcommits preset, default is angular
+                  # The type of release is determined by the commit type.
+                  releaseRules: [
+                    { type: "build", release: "patch" },
+                    { type: "chore", release: "patch" },
+                    { type: "perf", release: "patch" },
+                    { type: "refactor", release: "patch" },
+                    { type: "style", release: "patch" },
+                  ],
+                },
+              ],
+              [
+                /**
+                * This plugin is responsible for generating the release notes based on the commit messages.
+                * The generated notest will be used by
+                * - the `@semantic-release/github` plugin to create a release on GitHub.
+                * - the `@semantic-release/changelog` plugin to update the `CHANGELOG.md` file.
+                */
+                "@semantic-release/release-notes-generator",
+                {
+                  preset: "conventionalcommits",
+                  presetConfig: {
+                    # Commit categories and their corresponding sections in the release notes.
+                    # The `hidden` property indicates whether the section should be included in the release notes.
+
+                    types: [
+                      { type: "feat", section: "Features" },
+                      { type: "fix", section: "Bug Fixes" },
+                      { type: "build", section: "Other Changes", hidden: false },
+                      { type: "chore", section: "Other Changes", hidden: false },
+                      { type: "docs", section: "Other Changes", hidden: false },
+                      { type: "perf", section: "Other Changes" },
+                      { type: "refactor", section: "Other Changes", hidden: false },
+                      { type: "style", section: "Other Changes", hidden: false },
+                      { type: "ci", section: "CI", hidden: false },
+                    ],
+                  },
+                },
+              ],
+              [
+                # This plugin is responsible for updating the `CHANGELOG.md` file with the release notes.
+                "@semantic-release/changelog",
+                {
+                  changelogFile: "CHANGELOG.md",
+                },
+              ],
+              # This plugin is responsible for publishing the package to npm.
+              "@semantic-release/npm",
+              [
+                # This plugin is responsible for committing the changes made by the previous plugins.
+                "@semantic-release/git",
+                {
+                  assets: ["CHANGELOG.md", "package.json", "package-lock.json"],
+                  message:
+                    "chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+                },
+              ],
+              # This plugin is resposible for creating Github releases and update included PR's with the release information.
+              "@semantic-release/github",
+            ]
+          dry-run: true
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
