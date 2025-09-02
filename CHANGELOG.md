@@ -1,3 +1,17 @@
+## [0.3.1](https://github.com/SandeepK1729/jarvis/compare/v0.3.0...v0.3.1) (2025-09-02)
+
+
+### Bug Fixes
+
+* 🐛 dynamically assigning version to CLI ([7da79bc](https://github.com/SandeepK1729/jarvis/commit/7da79bc960fe4fbdc2d36db2317831a9093948f7))
+
+
+### Other Changes
+
+* 📚 add version checking option documentation ([becf8aa](https://github.com/SandeepK1729/jarvis/commit/becf8aadd150802f3a7636623252625bc43d82c5))
+* 🔧 improvise scripts for developer experience ([f531fe9](https://github.com/SandeepK1729/jarvis/commit/f531fe9331360b018ee272bef070db5523801492))
+* 🔧 update license to MIT ([5f9c9b5](https://github.com/SandeepK1729/jarvis/commit/5f9c9b591ae4a39413f8139e671000ab85ba1ec7))
+
 ## [0.3.0](https://github.com/SandeepK1729/jarvis/compare/v0.2.3...v0.3.0) (2025-09-02)
 
 
