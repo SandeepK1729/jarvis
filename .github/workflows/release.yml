@@ -35,7 +35,7 @@ jobs:
         with:
           # The branches on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
           additional-packages: |
-            ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git']
+            ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git', 'semantic-release-github-pullrequest']
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}

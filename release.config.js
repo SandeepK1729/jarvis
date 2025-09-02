@@ -61,12 +61,16 @@ const config = {
     '@semantic-release/npm',
     [
       // This plugin is responsible for committing the changes made by the previous plugins.
-      '@semantic-release/git',
-      {
-        assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
-        message:
-          'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-      },
+      // '@semantic-release/git',
+      // {
+      //   assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
+      //   message:
+      //     'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+      // },
+      "semantic-release-github-pullrequest", {
+        assets: ["CHANGELOG.md"],
+        baseRef: "prerelease"
+      }
     ],
     // This plugin is resposible for creating Github releases and update included PR's with the release information.
     '@semantic-release/github',
