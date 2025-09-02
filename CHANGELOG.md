@@ -1,3 +1,10 @@
+## [0.2.0](https://github.com/SandeepK1729/jarvis/compare/v0.1.3...v0.2.0) (2025-09-02)
+
+
+### Features
+
+* ✨ introduce optional execution path for aliases ([#32](https://github.com/SandeepK1729/jarvis/issues/32)) ([66e80b8](https://github.com/SandeepK1729/jarvis/commit/66e80b8475f9a2313e9bdf7754e257c5f24261bc))
+
 ## [0.1.3](https://github.com/SandeepK1729/jarvis/compare/v0.1.2...v0.1.3) (2025-09-02)
 
 
