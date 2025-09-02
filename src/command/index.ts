@@ -32,7 +32,8 @@ jarvis
   .command("remove")
   .description("Remove an existing alias")
   .action(async () => {
-    const selected = await selectAliasToDelete(getAllAliases());
+    const aliases = getAllAliases();
+    const selected = await selectAliasToDelete(Object.values(aliases));
 
     if (selected.length === 0) {
       console.log("No aliases selected for removal.");
