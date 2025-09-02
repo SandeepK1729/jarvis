@@ -72,7 +72,7 @@ export const aliasInput = async (): Promise<Alias> => {
   const trimmedResults = {
     alias: results.alias.trim(),
     command: results.command.trim(),
-    path: results.path.trim() === '' ? undefined : results.path.trim(),
+    path: (results.path && results.path.trim() !== '' ? results.path.trim() : undefined),
   };
 
   return trimmedResults;
