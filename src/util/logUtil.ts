@@ -6,7 +6,8 @@ import { Alias } from "@/types";
  */
 export const logAliasRun = (alias: Alias) => {
   let message = `
-> Command: ${alias.command}
+> Running Command:
+> ${alias.command}
 `;
 
   if (alias.path) {
