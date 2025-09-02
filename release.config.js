@@ -22,7 +22,10 @@ const releseNotesTypes = [
 ];
 
 const config = {
-  branches: ['master'],
+  branches: [
+    { name: "master" },
+    { name: "prerelease", channel: "pre/rc", prerelease: "rc" }, // `prerelease` is built with the template `${name.replace(/^pre\\//g, "")}`
+  ],
   plugins: [
     [
       // This plugin is responsible for analyzing the commit messages and determining the type of release to be made.
