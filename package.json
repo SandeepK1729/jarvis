@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsc -w & ncc build src/index.ts --out dist --watch",
     "build": "tsc && ncc build src/index.ts --out dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "typescript": "^5.9.2"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "directory": "dist"
   }
 }
