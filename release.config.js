@@ -10,15 +10,16 @@ const releaseRules = [
 // Commit categories and their corresponding sections in the release notes.
 // The `hidden` property indicates whether the section should be included in the release notes.
 const releseNotesTypes = [
-  { type: 'feat', section: 'Features' },
-  { type: 'fix', section: 'Bug Fixes' },
-  { type: 'build', section: 'Other Changes', hidden: false },
-  { type: 'chore', section: 'Other Changes', hidden: false },
-  { type: 'docs', section: 'Other Changes', hidden: false },
-  { type: 'perf', section: 'Other Changes' },
-  { type: 'refactor', section: 'Other Changes', hidden: false },
-  { type: 'style', section: 'Other Changes', hidden: false },
-  { type: 'ci', section: 'CI', hidden: false },
+  { type: 'feat', section: '✨ Features' },
+  { type: 'fix', section: '🐛 Bug Fixes' },
+  { type: 'perf', section: '⚡ Performance' },
+  { type: 'docs', section: '📚 Documentation', hidden: false },
+  { type: 'ci', section: '🔧 CI & CD', hidden: false },
+  { type: 'style', section: '🎨 UX Changes', hidden: false },
+  { type: 'build', section: '🔧 Other Changes', hidden: false },
+  { type: 'chore', section: '🔧 Other Changes', hidden: false },
+  { type: 'refactor', section: '🔧 Other Changes', hidden: false },
+  { type: 'dx', section: '🔧 Developer Experience', hidden: false }
 ];
 
 const config = {
