@@ -7,7 +7,8 @@
     "jarvis": "dist/index.js"
   },
   "scripts": {
-    "dev": "tsc -w & ncc build src/index.ts --out dist --watch",
+    "dev": "tsc -w & ncc build src/index.ts --out dist --watch & npm link",
+    "unlink": "npm unlink @sandeepk1729/jarvis -g",
     "build": "tsc && ncc build src/index.ts --out dist",
     "prepublishOnly": "npm run build"
   },
