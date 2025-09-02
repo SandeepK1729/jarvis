@@ -1,7 +1,7 @@
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
   workflow_dispatch:
 
 permissions:
@@ -13,7 +13,7 @@ permissions:
 name: semantic release action
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     steps:
       # Checkout the repository
@@ -32,13 +32,17 @@ jobs:
         uses: docker://ghcr.io/codfish/semantic-release-action@sha256:4c0955361cf42e5ab9bb05df3a1e2a781c443f9760b63a68957689445051a2fb
 
         with:
-          # The branches on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
-          # branches: # optional
-          # List of modules or file paths containing . https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#extends
-          # extends: # optional
-          # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
+          # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it.
+          # https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
           additional-packages: |
             ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git']
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # This is used to set the author and committer information for semantic release commits
+          # If environment variables are not set, committer will be in the name of Semantic Release Bot instead of the GitHub Actions bot
+          GIT_AUTHOR_NAME: "github-actions[bot]"
+          GIT_AUTHOR_EMAIL: "github-actions[bot]@users.noreply.github.com"
+          GIT_COMMITTER_NAME: "github-actions[bot]"
+          GIT_COMMITTER_EMAIL: "github-actions[bot]@users.noreply.github.com"
