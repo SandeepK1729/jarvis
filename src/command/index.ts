@@ -11,8 +11,14 @@ import {
 } from "@/datasources";
 import { aliasInput, logAliasRun, selectAliasToDelete } from "@/util";
 import { Alias } from "@/types";
+import pkg from '../../package.json';
 
 const jarvis = new Command();
+
+jarvis
+  .name('jarvis')
+  .description(pkg.description)
+  .version(pkg.version); // <-- Dynamically injected
 
 // 1. add alias
 jarvis
