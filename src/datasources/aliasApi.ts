@@ -9,7 +9,7 @@ interface IData {
   }
 }
 
-const dbPath = path.join(process.env.HOME || "", "db.json");
+const dbPath = path.join(process.env.HOME || "", ".jarvisrc");
 const db = JSONFileSyncPreset<IData>(dbPath, {
   jarvis: {},
 });
