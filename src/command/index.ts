@@ -7,6 +7,7 @@ import {
   findAliasByName,
   addAlias,
   deleteAliasByNames,
+  incrementAliasUsage,
 } from "@/datasources";
 import { aliasInput, logAliasRun, selectAliasToDelete } from "@/util";
 import { Alias } from "@/types";
@@ -92,6 +93,7 @@ jarvis
     });
 
     logAliasRun(alias, childProcess);
+    incrementAliasUsage(alias.alias);
   });
 
 export default jarvis;
