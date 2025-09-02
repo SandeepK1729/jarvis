@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/SandeepK1729/jarvis/compare/v0.2.1...v0.2.2) (2025-09-02)
+
+
+### Other Changes
+
+* ⚡ ignore unwanted files from publishing ([#34](https://github.com/SandeepK1729/jarvis/issues/34)) ([136dfee](https://github.com/SandeepK1729/jarvis/commit/136dfee4f9702c1bae2a3c75b2a47a85122afe6c))
+
 ## [0.2.1](https://github.com/SandeepK1729/jarvis/compare/v0.2.0...v0.2.1) (2025-09-02)
 
 
