@@ -8,7 +8,7 @@ import {
   addAlias,
   deleteAliasByNames,
 } from "@/datasources";
-import { aliasInput, selectAliasToDelete } from "@/util";
+import { aliasInput, logAliasRun, selectAliasToDelete } from "@/util";
 import { Alias } from "@/types";
 
 const jarvis = new Command();
@@ -53,7 +53,7 @@ jarvis
   .description("List all aliases")
   .action(() => {
     const aliases = getAllAliases();
-    console.table(aliases, ["command"]);
+    console.table(aliases, ["command", "path"]);
   });
 
 // 4. run alias
@@ -80,13 +80,18 @@ jarvis
       process.exit(1);
     }
 
-    console.log(`\n> Running command:`);
-    console.log(`> ${alias.command}\n`);
+    logAliasRun(alias);
 
-    const execOptions: SpawnOptions = options.silent
+    const conditionalExecOptions: SpawnOptions = options.silent
       ? { stdio: undefined }
       : { stdio: "inherit" };
-    spawn(tool, commandArgs, execOptions);
+
+    const otherExecOptions: SpawnOptions = { cwd: alias.path };
+
+    spawn(tool, commandArgs, {
+      ...otherExecOptions,
+      ...conditionalExecOptions,
+    });
   });
 
 export default jarvis;

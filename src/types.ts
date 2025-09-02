@@ -1,7 +1,7 @@
 export interface Alias {
   alias: string;
   command: string;
-  path?: string | undefined;
+  path: string | undefined;
   description?: string;
 }
 
