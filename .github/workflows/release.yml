@@ -37,5 +37,5 @@ jobs:
           additional-packages: |
             ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git']
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
