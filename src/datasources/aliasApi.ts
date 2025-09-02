@@ -23,6 +23,19 @@ const findAliasByName = (name: string): Alias | undefined => {
 };
 
 /**
+ * Increment the usage count of a command alias.
+ * @param name The name of the alias to increment.
+ */
+const incrementAliasUsage = (name: string): void => {
+  db.update(({ jarvis }) => {
+    const alias = jarvis[name];
+    if (alias) {
+      alias.count = (alias.count || 0) + 1;
+    }
+  });
+};
+
+/**
  * Add a new command alias.
  * @param alias The alias object to add.
  * @returns The added alias object.
@@ -59,6 +72,7 @@ const flushAliases = (): void => {
 export {
   getAllAliases,
   findAliasByName,
+  incrementAliasUsage,
   addAlias,
   deleteAliasByNames,
   flushAliases,

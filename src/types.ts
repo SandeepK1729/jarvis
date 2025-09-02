@@ -25,6 +25,9 @@ export interface Alias {
    * @example "Run my Java application"
    */
   description?: string;
+
+  /** Number of times the alias has been used */
+  count?: number;
 }
 
 /** Interface for the database */
