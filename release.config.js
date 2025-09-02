@@ -69,7 +69,8 @@ const config = {
       // },
       "semantic-release-github-pullrequest", {
         assets: ["CHANGELOG.md"],
-        baseRef: "prerelease"
+        baseRef: "prerelease",
+        branch: "release"
       }
     ],
     // This plugin is resposible for creating Github releases and update included PR's with the release information.
