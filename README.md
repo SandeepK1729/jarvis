@@ -51,6 +51,7 @@ Arguments:
   string        alias command
 
 Options:
+  -V, --version  output the version number
   -s, --silent  run command silently
   -h, --help    display help for command
 
@@ -140,6 +141,14 @@ You will be prompted to select which alias(es) to delete.
 │
 ◇  Removed alias 'hello'
 ```
+
+### Version Check
+
+```bash
+jarvis --version
+```
+
+This command will display the current version of Jarvis installed on your system.
 
 ---
 
