@@ -6,9 +6,9 @@
 
 ## Features
 
-- **Add Aliases:** Map any shell command to an easy-to-remember alias.
+- **Add Aliases:** Map any shell command to an easy-to-remember alias, with optional directory path for execution.
 - **Remove Aliases:** Delete aliases you no longer need.
-- **List Aliases:** View all your defined aliases.
+- **List Aliases:** View all your defined aliases, including their execution paths.
 - **Run Aliases:** Execute commands using your defined shortcuts.
 - **Silent Mode:** Run commands without displaying output.
 
@@ -60,6 +60,8 @@ Commands:
   list          List all aliases
 ```
 
+---
+
 ### Adding an Alias
 
 ```bash
@@ -69,21 +71,32 @@ jarvis alias
 You will be prompted:
 - **What is the command to alias?** (e.g. `echo "hello world"`)
 - **What is the alias command?** (e.g. `hello`)
+- **Is there any specific path for the command run?** (e.g. `/Users/SandeepK1729/Projects`)
+  *(Optional - It will run in the current directory if not specified)*
 
 **Example Interaction:**
 ```
 ◇  What is the command to alias?
 │  echo "hello world"
+│
 ◇  What is the alias command ?
 │  hello
+│
+◇  Is there any specific path for the command run? (Optional - It will run in the current directory if not specified)
+│  /Users/SandeepK1729/Projects
+│
 ◇  Added alias 'hello' to run command: 'echo "hello world"'
 ```
+
+---
 
 ### Running an Alias
 
 ```bash
-jarvis hello
+jarvis hi
 ```
+
+If a path was provided while creating the alias, the command runs in that directory; otherwise, it runs in the current working directory.
 
 **Output:**
 ```
@@ -93,6 +106,8 @@ jarvis hello
 "hello world"
 ```
 
+---
+
 ### Listing Aliases
 
 ```bash
@@ -101,12 +116,14 @@ jarvis list
 
 **Sample Output:**
 ```
-┌─────────┬─────────────┬────────────────────────────────────┐
-│ (index) │ alias       │ command                            │
-├─────────┼─────────────┼────────────────────────────────────┤
-│ 0       │ 'hello'     │ 'echo "hello world"'               │
-└─────────┴─────────────┴────────────────────────────────────┘
+┌───────────┬────────────────────────────────────┬────────────────────────────────────────────────────────────────────────┐
+│ (index)   │ command                            │ path                                                                   │
+├───────────┼────────────────────────────────────┼────────────────────────────────────────────────────────────────────────┤
+│ hello     │ 'echo "hello world"'               │ '/Users/SandeepK1729/Projects'                                         │
+└───────────┴────────────────────────────────────┴────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
 
 ### Removing an Alias
 
@@ -120,6 +137,7 @@ You will be prompted to select which alias(es) to delete.
 ```
 ◇  Select aliases to delete
 │  hello
+│
 ◇  Removed alias 'hello'
 ```
 
