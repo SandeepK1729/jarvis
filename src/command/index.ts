@@ -80,18 +80,18 @@ jarvis
       process.exit(1);
     }
 
-    logAliasRun(alias);
-
     const conditionalExecOptions: SpawnOptions = options.silent
       ? { stdio: undefined }
       : { stdio: "inherit" };
 
     const otherExecOptions: SpawnOptions = { cwd: alias.path };
 
-    spawn(tool, commandArgs, {
+    const childProcess = spawn(tool, commandArgs, {
       ...otherExecOptions,
       ...conditionalExecOptions,
     });
+
+    logAliasRun(alias, childProcess);
   });
 
 export default jarvis;
