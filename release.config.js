@@ -60,7 +60,7 @@ const config = {
       // This plugin is responsible for committing the changes made by the previous plugins.
       '@semantic-release/git',
       {
-        assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
+        assets: ['CHANGELOG.md', 'package.json', 'pnpm-lock.yaml'],
         message:
           'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
