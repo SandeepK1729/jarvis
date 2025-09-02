@@ -16,9 +16,9 @@ const db = JSONFileSyncPreset<IData>(dbPath, {
 
 /**
  * Get all command aliases.
- * @returns A list of all command aliases.
+ * @returns A map of aliases.
  */
-export const getAllAliases = (): Alias[] => Object.values(db.data.jarvis);
+export const getAllAliases = () => db.data.jarvis;
 
 export const findAliasByName = (name: string): Alias | undefined => {
   return db.data.jarvis[name];

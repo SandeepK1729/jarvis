@@ -52,7 +52,7 @@ jarvis
   .description("List all aliases")
   .action(() => {
     const aliases = getAllAliases();
-    console.table(aliases);
+    console.table(aliases, ["command"]);
   });
 
 // 4. run alias
