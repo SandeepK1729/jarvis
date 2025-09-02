@@ -1,3 +1,26 @@
+## [0.3.0](https://github.com/SandeepK1729/jarvis/compare/v0.2.3...v0.3.0) (2025-09-02)
+
+
+### Features
+
+* ✨ log PID for better experience ([c7c8c21](https://github.com/SandeepK1729/jarvis/commit/c7c8c21f6274279a4c8f721fbfa3755fc518cc50))
+* ✨ track the executions of alias commands ([#42](https://github.com/SandeepK1729/jarvis/issues/42)) ([ed19d70](https://github.com/SandeepK1729/jarvis/commit/ed19d70c45540fe206865da9143e06cd92ffb631)), closes [#37](https://github.com/SandeepK1729/jarvis/issues/37)
+
+
+### Bug Fixes
+
+* 🐛 resolved error when path is empty ([c053bae](https://github.com/SandeepK1729/jarvis/commit/c053bae23c24f5513abfde8a16a647d7be1e95a8))
+
+
+### Other Changes
+
+* 📚 improvise code comments and refactor ([9183d27](https://github.com/SandeepK1729/jarvis/commit/9183d27bbb3a5ba508cdeaeb5c174c1167931e7f))
+
+
+### CI
+
+* 🔧 disable build action on push ([4a81c61](https://github.com/SandeepK1729/jarvis/commit/4a81c61d9085d253225dc00d4564c2a7102b7a7f))
+
 ## [0.2.3](https://github.com/SandeepK1729/jarvis/compare/v0.2.2...v0.2.3) (2025-09-02)
 
 
