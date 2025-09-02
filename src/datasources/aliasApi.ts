@@ -1,15 +1,8 @@
 import { JSONFileSyncPreset } from "lowdb/node";
-import path from "path";
 
-import { Alias } from "@/types";
+import { dbPath } from "@/config";
+import { Alias, IData } from "@/types";
 
-interface IData {
-  jarvis: {
-    [key: string]: Alias
-  }
-}
-
-const dbPath = path.join(process.env.HOME || "", ".jarvisrc");
 const db = JSONFileSyncPreset<IData>(dbPath, {
   jarvis: {},
 });
@@ -18,9 +11,14 @@ const db = JSONFileSyncPreset<IData>(dbPath, {
  * Get all command aliases.
  * @returns A map of aliases.
  */
-export const getAllAliases = () => db.data.jarvis;
+const getAllAliases = () => db.data.jarvis;
 
-export const findAliasByName = (name: string): Alias | undefined => {
+/**
+ * Find a command alias by name.
+ * @param name The name of the alias to find.
+ * @returns The found alias or undefined if not found.
+ */
+const findAliasByName = (name: string): Alias | undefined => {
   return db.data.jarvis[name];
 };
 
@@ -29,15 +27,19 @@ export const findAliasByName = (name: string): Alias | undefined => {
  * @param alias The alias object to add.
  * @returns The added alias object.
  */
-export const addAlias = (alias: Alias): Alias => {
+const addAlias = (alias: Alias): Alias => {
   db.update(({ jarvis }) => {
-    jarvis[alias.alias] = alias;
+    jarvis[alias.alias] = { count: 0, ...alias };
   });
 
   return alias;
 };
 
-export const deleteAliasByNames = (names: string[]) => {
+/**
+ * Delete command aliases by their names.
+ * @param names The names of the aliases to delete.
+ */
+const deleteAliasByNames = (names: string[]) => {
   db.update(({ jarvis }) => {
     names.forEach((name) => {
       delete jarvis[name];
@@ -48,8 +50,16 @@ export const deleteAliasByNames = (names: string[]) => {
 /**
  * Flush all command aliases.
  */
-export const flushAliases = (): void => {
+const flushAliases = (): void => {
   db.update(({ jarvis }) => {
     jarvis = {};
   });
+};
+
+export {
+  getAllAliases,
+  findAliasByName,
+  addAlias,
+  deleteAliasByNames,
+  flushAliases,
 };
