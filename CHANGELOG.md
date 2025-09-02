@@ -1,3 +1,15 @@
+## [0.2.3](https://github.com/SandeepK1729/jarvis/compare/v0.2.2...v0.2.3) (2025-09-02)
+
+
+### Other Changes
+
+* 🔧 update db filename to `.jarvisrc` ([#36](https://github.com/SandeepK1729/jarvis/issues/36)) ([897f202](https://github.com/SandeepK1729/jarvis/commit/897f202844ed1a703954cf6c387b89c286257bc6))
+
+
+### CI
+
+* 🔧 update trigger for release action ([#35](https://github.com/SandeepK1729/jarvis/issues/35)) ([90693b0](https://github.com/SandeepK1729/jarvis/commit/90693b064dc281cdaab1ab27b6404b342e73555a))
+
 ## [0.2.2](https://github.com/SandeepK1729/jarvis/compare/v0.2.1...v0.2.2) (2025-09-02)
 
 
