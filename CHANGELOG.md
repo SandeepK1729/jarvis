@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/SandeepK1729/jarvis/compare/v0.2.0...v0.2.1) (2025-09-02)
+
+
+### Other Changes
+
+* 🔧 update release config and CHANGELOG ([#33](https://github.com/SandeepK1729/jarvis/issues/33)) ([982f87c](https://github.com/SandeepK1729/jarvis/commit/982f87caeb04ca3b6e2528d2b5438bcbc357f953))
+
 ## [0.2.0](https://github.com/SandeepK1729/jarvis/compare/v0.1.3...v0.2.0) (2025-09-02)
 
 
