@@ -42,3 +42,6 @@ jobs:
 
       - name: Build project
         run: pnpm build
+
+      - name: Publish dry run
+        run: pnpm publish --dry-run
