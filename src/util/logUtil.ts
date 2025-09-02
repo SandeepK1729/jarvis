@@ -6,7 +6,6 @@ import { Alias } from "@/types";
  */
 export const logAliasRun = (alias: Alias) => {
   let message = `
-> Running alias '${alias.alias}'
 > Command: ${alias.command}
 `;
 
