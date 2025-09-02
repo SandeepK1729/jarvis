@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+      - prerelease
   workflow_dispatch:
 
 permissions:
