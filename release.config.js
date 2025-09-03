@@ -70,11 +70,6 @@ const config = {
     [
       "@semantic-release/github",
       {
-        "assets": [
-          "dist/*",
-          "README.md",
-          "package.json"
-        ],
         "discussionCategoryName": "Announcements"
       }
     ]
