@@ -70,7 +70,7 @@ const config = {
     [
       "@semantic-release/github",
       {
-        "discussionCategoryName": "Announcements"
+        "discussionCategoryName": "Notifications"
       }
     ]
   ]
