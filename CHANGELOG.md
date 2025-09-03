@@ -1,3 +1,16 @@
+## [0.4.0](https://github.com/SandeepK1729/jarvis/compare/v0.3.3...v0.4.0) (2025-09-03)
+
+
+### ✨ Features
+
+* ✨ support JARVIS_HOME env variable for db path ([611f66c](https://github.com/SandeepK1729/jarvis/commit/611f66c4a2f159a51d3e43b825a829a432a1951c))
+
+
+### 🔧 Developer Experience
+
+* 🔧 update dev command ([ace5dc3](https://github.com/SandeepK1729/jarvis/commit/ace5dc3d8dd862cce6a655a89a9b827cab4e10d4))
+* **semantic-release:** 🔧 automate announcements for release ([e62a588](https://github.com/SandeepK1729/jarvis/commit/e62a588039c83c4161b5a2a71057e63200f05141))
+
 ## [0.3.3](https://github.com/SandeepK1729/jarvis/compare/v0.3.2...v0.3.3) (2025-09-03)
 
 

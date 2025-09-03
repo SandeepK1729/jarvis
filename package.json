@@ -1,6 +1,6 @@
 {
   "name": "@sandeepk1729/jarvis",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Jarvis is a CLI tool that lets you create custom aliases for commands and paths, so you can run complex commands using simple shortcuts.",
   "main": "./dist/index.js",
   "bin": {
