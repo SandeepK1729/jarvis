@@ -1,3 +1,22 @@
+## [0.3.2](https://github.com/SandeepK1729/jarvis/compare/v0.3.1...v0.3.2) (2025-09-03)
+
+
+### 🔧 CI & CD
+
+* 🔧 rename lint gh action file ([a000f1a](https://github.com/SandeepK1729/jarvis/commit/a000f1a05acc8c6f222fcdb295b69825d1ead87e))
+
+
+### 🎨 UX Changes
+
+* 💄 update error message for alias config ([da1ccbb](https://github.com/SandeepK1729/jarvis/commit/da1ccbb872cd2007fa26979fff691823b6db2163))
+
+
+### 🔧 Developer Experience
+
+* 🔧 configure dependabot for github actions ([f02fb8b](https://github.com/SandeepK1729/jarvis/commit/f02fb8bc5464b7377d032fc70b15126c96df1617))
+* 🔧 update release notes grouping ([475689c](https://github.com/SandeepK1729/jarvis/commit/475689c20634e427ec5f6318edf6d296b29cb56d))
+* **semantic-release:** 🔧 introducing automated announcements for release ([63bf3c0](https://github.com/SandeepK1729/jarvis/commit/63bf3c0390961ad2d6d531b536044ae0ace2c2cb))
+
 ## [0.3.1](https://github.com/SandeepK1729/jarvis/compare/v0.3.0...v0.3.1) (2025-09-02)
 
 
