@@ -40,8 +40,8 @@ export const aliasInput = async (): Promise<Alias> => {
               return "Alias cannot be empty.";
             }
 
-            if (["alias", "run", "remove"].includes(trimmedValue)) {
-              return `Alias '${trimmedValue}' is already taken. Choose another name.`;
+            if (["alias", "remove", "list"].includes(trimmedValue)) {
+              return `${trimmedValue} is a reserved command. Choose another name.`;
             }
 
             return undefined;
