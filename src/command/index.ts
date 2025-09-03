@@ -73,7 +73,7 @@ jarvis
     const alias = findAliasByName(args.join(" "));
 
     if (!alias) {
-      console.error(`Alias not found: ${args.join(" ")}`);
+      console.error(`Alias not found`);
       process.exit(1);
     }
 
@@ -83,7 +83,7 @@ jarvis
     const commandArgs = cmd.slice(1);
 
     if (!tool) {
-      console.error("Please provide a tool to run.");
+      console.error("No command found to execute.");
       process.exit(1);
     }
 
