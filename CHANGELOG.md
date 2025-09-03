@@ -1,3 +1,20 @@
+## [0.4.1](https://github.com/SandeepK1729/jarvis/compare/v0.4.0...v0.4.1) (2025-09-03)
+
+
+### 🔧 CI & CD
+
+* 🔧 remove unwanted assets from release ([dab7023](https://github.com/SandeepK1729/jarvis/commit/dab7023a75efd5ce2a42c6dd3fe26d8c3f30dc45))
+
+
+### 🔧 Other Changes
+
+* ♻️ improve type exports in types.ts ([7115dd2](https://github.com/SandeepK1729/jarvis/commit/7115dd29c34b5ef396a2ea788f808da62c19a256))
+
+
+### 🔧 Developer Experience
+
+* **semantic-release:** 🔧 automate announcements for release ([14212c9](https://github.com/SandeepK1729/jarvis/commit/14212c9414f929bccdcc41c6b6fd44243fe64549))
+
 ## [0.4.0](https://github.com/SandeepK1729/jarvis/compare/v0.3.3...v0.4.0) (2025-09-03)
 
 
