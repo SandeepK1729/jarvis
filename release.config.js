@@ -67,8 +67,18 @@ const config = {
       },
     ],
     // This plugin is resposible for creating Github releases and update included PR's with the release information.
-    '@semantic-release/github',
-  ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          "dist/*",
+          "README.md",
+          "package.json"
+        ],
+        "discussionCategoryName": "<%= nextRelease.name %>"
+      }
+    ]
+  ]
 };
 
 module.exports = config;
