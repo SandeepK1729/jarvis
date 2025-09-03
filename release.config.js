@@ -75,7 +75,7 @@ const config = {
           "README.md",
           "package.json"
         ],
-        "discussionCategoryName": "<%= nextRelease.name %>"
+        "discussionCategoryName": "announcements"
       }
     ]
   ]
