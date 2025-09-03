@@ -1,3 +1,15 @@
+## [0.3.3](https://github.com/SandeepK1729/jarvis/compare/v0.3.2...v0.3.3) (2025-09-03)
+
+
+### 🎨 UX Changes
+
+* 💄 update proper error message ([cf00c8b](https://github.com/SandeepK1729/jarvis/commit/cf00c8b0de014bd29e5c512b41393375adc2f7c5))
+
+
+### 🔧 Developer Experience
+
+* **semantic-release:** 🔧 automate announcements for release ([911986f](https://github.com/SandeepK1729/jarvis/commit/911986f75e2705c2ca182f13913bf076b4aa393e))
+
 ## [0.3.2](https://github.com/SandeepK1729/jarvis/compare/v0.3.1...v0.3.2) (2025-09-03)
 
 
