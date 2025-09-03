@@ -1,4 +1,4 @@
-export interface Alias {
+interface Alias {
   /**
    * The name of the alias
    * @example "ls"
@@ -31,8 +31,10 @@ export interface Alias {
 }
 
 /** Interface for the database */
-export interface IData {
+interface IData {
   jarvis: {
     [key: string]: Alias
   }
 }
+
+export { Alias, IData };
