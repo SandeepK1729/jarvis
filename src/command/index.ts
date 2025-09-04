@@ -1,6 +1,7 @@
 import { spawn, SpawnOptions } from "child_process";
-import { Command } from "commander";
+// import { Command } from "commander";
 import { spinner } from "@clack/prompts";
+import { Command } from "@naerth/commander-autocomplete";
 
 import {
   getAllAliases,
@@ -19,6 +20,11 @@ jarvis
   .name('jarvis')
   .description(pkg.description)
   .version(pkg.version); // <-- Dynamically injected
+
+jarvis.autocomplete(() => {
+  console.log("Autocomplete triggered for main command");
+  return ["alias", "remove", "list"];
+});
 
 // 1. add alias
 jarvis
@@ -69,6 +75,10 @@ jarvis
   .description("used to run alias commands")
   // .option('-d, --debug', 'run command in debug mode')
   .option("-s, --silent", "run command silently")
+  .autocomplete(async (...cmdArgs: any[]) => {
+    console.log("Autocomplete triggered", cmdArgs);
+    return ["world", "universe"]; // programmatic autocomplete
+  })
   .action((args: string[], options) => {
     const alias = findAliasByName(args.join(" "));
 
