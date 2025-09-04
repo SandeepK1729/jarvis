@@ -19,18 +19,8 @@
 Install Jarvis globally from the GitHub Package Registry:
 
 ```bash
-npm install -g @SandeepK1729/jarvis
+npm install -g @SandeepK1729/jarvis  --registry=https://npm.pkg.github.com
 ```
-
-> **Note:** To install from GitHub Packages, create a `.npmrc` file in your home or project directory:
-> ```
-> @SandeepK1729:registry=https://npm.pkg.github.com
-> ```
-> Then log in:
-> ```bash
-> npm login --registry=https://npm.pkg.github.com
-> ```
-> Use your GitHub username and a personal access token.
 
 ---
 
