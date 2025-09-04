@@ -1,4 +1,4 @@
-# Jarvis
+# Jarvis [![starline](https://starlines.qoo.monster/assets/SandeepK1729/jarvis)](https://github.com/qoomon/starline)
 
 **Jarvis** is a CLI tool and npm package for creating custom command aliases. Instantly turn lengthy or complex shell commands into simple shortcuts, boosting your productivity in the terminal.
 
