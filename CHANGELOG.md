@@ -1,3 +1,20 @@
+## [0.4.2](https://github.com/SandeepK1729/jarvis/compare/v0.4.1...v0.4.2) (2025-09-04)
+
+
+### 📚 Documentation
+
+* 📚 simplify install instructions in README ([f272901](https://github.com/SandeepK1729/jarvis/commit/f272901f9ed58b4e0a2d40ebe2e085727ee143ec))
+
+
+### 🔧 CI & CD
+
+* 🔧 limit permissions to pr lint workflow ([#67](https://github.com/SandeepK1729/jarvis/issues/67)) ([91b2b9a](https://github.com/SandeepK1729/jarvis/commit/91b2b9abc7c4603095b18c65590e1cd4124828e2))
+
+
+### 🔧 Other Changes
+
+* ♻️ update publishConfig in package.json ([b8117a6](https://github.com/SandeepK1729/jarvis/commit/b8117a637f96b7f9f21f4e7c1ad15f13c1b68be7))
+
 ## [0.4.1](https://github.com/SandeepK1729/jarvis/compare/v0.4.0...v0.4.1) (2025-09-03)
 
 
