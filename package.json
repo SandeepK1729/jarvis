@@ -37,8 +37,9 @@
     "typescript": "^5.9.2"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "directory": "dist"
+    "access": "public",
+    "directory": "dist",
+    "registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist/",
