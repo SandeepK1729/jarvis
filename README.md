@@ -1,8 +1,26 @@
+<p align="center">
+  <h1>Jarvis [![starline](https://starlines.qoo.monster/assets/SandeepK1729/jarvis)](https://github.com/qoomon/starline)</h1>
+
+  
+[![CI](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml)
+[![PR lint](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml)
+[![Release](https://github.com/SandeepK1729/jarvis/actions/workflows/release.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/release.yml)
+
+[![NPM Version](https://img.shields.io/npm/v/@sandeepk1729/jarvis.svg)](https://www.npmjs.com/package/@sandeepk1729/jarvis)
+[![NPM Downloads](https://img.shields.io/npm/dt/@sandeepk1729/jarvis.svg)](https://www.npmjs.com/package/@sandeepk1729/jarvis)
+[![License](https://img.shields.io/npm/l/@sandeepk1729/jarvis.svg)](https://opensource.org/licenses/MIT)
+
+</p>
+<br/>
+
+
+
 # Jarvis [![starline](https://starlines.qoo.monster/assets/SandeepK1729/jarvis)](https://github.com/qoomon/starline)
 
 [![CI](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml)
 [![PR lint](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml)
 [![Release](https://github.com/SandeepK1729/jarvis/actions/workflows/release.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/release.yml)
+
 [![NPM Version](https://img.shields.io/npm/v/@sandeepk1729/jarvis.svg)](https://www.npmjs.com/package/@sandeepk1729/jarvis)
 [![NPM Downloads](https://img.shields.io/npm/dt/@sandeepk1729/jarvis.svg)](https://www.npmjs.com/package/@sandeepk1729/jarvis)
 [![License](https://img.shields.io/npm/l/@sandeepk1729/jarvis.svg)](https://opensource.org/licenses/MIT)
