@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  id-token: write  # Required for OIDC
   contents: write
-  pull-requests: write
+  id-token: write  # Required for OIDC
   issues: write
   packages: write
+  pull-requests: write
 
 name: semantic release action
 
@@ -20,11 +20,6 @@ jobs:
       # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
 
       - name: Semantic Release Action
         # You may pin to the exact commit or the version.
@@ -39,7 +34,7 @@ jobs:
             ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git']
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
           # This is used to set the author and committer information for semantic release commits
           # If environment variables are not set, committer will be in the name of Semantic Release Bot instead of the GitHub Actions bot
