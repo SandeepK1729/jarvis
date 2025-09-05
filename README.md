@@ -1,19 +1,6 @@
 <p align="center">
   <h1>Jarvis <img width="180" src="https://starlines.qoo.monster/assets/SandeepK1729/jarvis" alt="starline logo" /></h1>
 
-
-  <a href="" target="_blank" rel="noopener noreferrer">
-    <img width="180" src="https://starlines.qoo.monster/assets/SandeepK1729/jarvis" alt="starline logo" />
-  </a>
-  
-[![CI](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml)
-[![PR lint](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml)
-[![Release](https://github.com/SandeepK1729/jarvis/actions/workflows/release.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/release.yml)
-
-[![NPM Version](https://img.shields.io/npm/v/@sandeepk1729/jarvis.svg)](https://www.npmjs.com/package/@sandeepk1729/jarvis)
-[![NPM Downloads](https://img.shields.io/npm/dt/@sandeepk1729/jarvis.svg)](https://www.npmjs.com/package/@sandeepk1729/jarvis)
-[![License](https://img.shields.io/npm/l/@sandeepk1729/jarvis.svg)](https://opensource.org/licenses/MIT)
-
 </p>
 <br/>
 
