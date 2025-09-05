@@ -1,3 +1,28 @@
+## [0.4.4](https://github.com/SandeepK1729/jarvis/compare/v0.4.3...v0.4.4) (2025-09-05)
+
+
+### Documentation
+
+* **README:** 📚 add github actions and npm badges  ([ecabf64](https://github.com/SandeepK1729/jarvis/commit/ecabf64a47671ba35feea1f63691b75c4d413c6d))
+* **readme:** 📚 add starline for better ux ([04e26c7](https://github.com/SandeepK1729/jarvis/commit/04e26c71f0eb9c2137a0bfe6ae5be172ae9b4c28))
+
+
+### CI & CD
+
+* ⚙️ realign the release workflow permissions ([d2563be](https://github.com/SandeepK1729/jarvis/commit/d2563beb2c49a66de32d8c3df74d70c0f6c2bb60))
+* **release:** ⚙️ setup prerelease support for dev, alpha, beta, next ([#78](https://github.com/SandeepK1729/jarvis/issues/78)) ([80ad65f](https://github.com/SandeepK1729/jarvis/commit/80ad65faabc257a4deda32c3a0030e346c84750d))
+
+
+### Build
+
+* **deps:** bump actions/checkout from 4 to 5 ([#52](https://github.com/SandeepK1729/jarvis/issues/52)) ([3d6259d](https://github.com/SandeepK1729/jarvis/commit/3d6259d200e11674715967a7db35e02e32951355))
+* **deps:** bump amannn/action-semantic-pull-request ([#53](https://github.com/SandeepK1729/jarvis/issues/53)) ([b4993ed](https://github.com/SandeepK1729/jarvis/commit/b4993ed7d3a0d470a011c8e195e9b12793dcc178))
+
+
+### Developer Experience
+
+* ♻️ restructured release notes format ([9f435d5](https://github.com/SandeepK1729/jarvis/commit/9f435d58bc2efbaa570f9dc99e268e8cd52d3db6))
+
 ## [0.4.3](https://github.com/SandeepK1729/jarvis/compare/v0.4.2...v0.4.3) (2025-09-05)
 
 
