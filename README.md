@@ -1,7 +1,10 @@
 <p align="center">
   <h1>Jarvis [![starline](https://starlines.qoo.monster/assets/SandeepK1729/jarvis)](https://github.com/qoomon/starline)</h1>
 
+
+  <a href="" target="_blank" rel="noopener noreferrer">
     <img width="180" src="https://starlines.qoo.monster/assets/SandeepK1729/jarvis" alt="starline logo" />
+  </a>
   
 [![CI](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml)
 [![PR lint](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/pr-lint.yml)
