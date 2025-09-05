@@ -1,3 +1,10 @@
+## [0.4.4-dev.1](https://github.com/SandeepK1729/jarvis/compare/v0.4.3...v0.4.4-dev.1) (2025-09-05)
+
+
+### 🔧 Other Changes
+
+* **oidc:** 📦 try configure oidc for dev release ([9300fc3](https://github.com/SandeepK1729/jarvis/commit/9300fc38d207674f6f2c6e5e224201649a83dc19))
+
 ## [0.4.3](https://github.com/SandeepK1729/jarvis/compare/v0.4.2...v0.4.3) (2025-09-05)
 
 
