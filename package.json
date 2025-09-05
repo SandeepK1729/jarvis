@@ -29,11 +29,8 @@
   },
   "homepage": "https://github.com/SandeepK1729/jarvis#readme",
   "devDependencies": {
-    "@clack/prompts": "^0.11.0",
     "@types/node": "^24.3.0",
     "@vercel/ncc": "^0.38.3",
-    "commander": "^14.0.0",
-    "lowdb": "^7.0.1",
     "typescript": "^5.9.2"
   },
   "publishConfig": {
@@ -45,5 +42,10 @@
     "dist/",
     "README.md",
     "package.json"
-  ]
+  ],
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "commander": "^14.0.0",
+    "lowdb": "^7.0.1"
+  }
 }
