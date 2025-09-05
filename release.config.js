@@ -23,7 +23,13 @@ const releseNotesTypes = [
 ];
 
 const config = {
-  branches: ['master'],
+  branches: [
+    'master',
+    { name: 'dev', prerelease: true },
+    { name: 'beta', prerelease: true },
+    { name: 'alpha', prerelease: true },
+    { name: 'next', prerelease: true },
+  ],
   plugins: [
     [
       // This plugin is responsible for analyzing the commit messages and determining the type of release to be made.
