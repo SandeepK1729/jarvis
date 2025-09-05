@@ -1,3 +1,16 @@
+## [0.4.3](https://github.com/SandeepK1729/jarvis/compare/v0.4.2...v0.4.3) (2025-09-05)
+
+
+### 🔧 CI & CD
+
+* ⚙️ use separate token for publish ([fdf4e9f](https://github.com/SandeepK1729/jarvis/commit/fdf4e9fe561d3b32505f96a912363f2f28e8b60f))
+
+
+### 🔧 Other Changes
+
+* ♻️ migrate from github npm registry to npm registry ([eb5abb1](https://github.com/SandeepK1729/jarvis/commit/eb5abb107317ee73f908965c87ccc31e3c7af44d))
+* **deps:** 📦 proper categorise dependencies ([c8fc5cb](https://github.com/SandeepK1729/jarvis/commit/c8fc5cb03e4c5a64df7fea53e671fffeb968cfa2))
+
 ## [0.4.2](https://github.com/SandeepK1729/jarvis/compare/v0.4.1...v0.4.2) (2025-09-04)
 
 
