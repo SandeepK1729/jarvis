@@ -101,6 +101,7 @@ If a path was provided while creating the alias, the command runs in that direct
 ```
 > Running command:
 > echo "hello world"
+> PID: 1234
 
 "hello world"
 ```
