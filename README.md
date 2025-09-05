@@ -16,10 +16,10 @@
 
 ## Installation
 
-Install Jarvis globally from the GitHub Package Registry:
+Install Jarvis globally from npm:
 
 ```bash
-npm install -g @SandeepK1729/jarvis  --registry=https://npm.pkg.github.com
+npm install -g @sandeepk1729/jarvis
 ```
 
 ---

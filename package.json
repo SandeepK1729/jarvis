@@ -22,7 +22,7 @@
     "alias",
     "commands"
   ],
-  "author": "SandeepK1729",
+  "author": "SandeepK1729 <SandeepK1729+user@users.noreply.github.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SandeepK1729/jarvis/issues"
@@ -39,7 +39,7 @@
   "publishConfig": {
     "access": "public",
     "directory": "dist",
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "files": [
     "dist/",
