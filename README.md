@@ -92,7 +92,7 @@ You will be prompted:
 ### Running an Alias
 
 ```bash
-jarvis hi
+jarvis hello
 ```
 
 If a path was provided while creating the alias, the command runs in that directory; otherwise, it runs in the current working directory.
