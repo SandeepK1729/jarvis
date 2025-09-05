@@ -1,3 +1,15 @@
+## [0.4.4-dev.2](https://github.com/SandeepK1729/jarvis/compare/v0.4.4-dev.1...v0.4.4-dev.2) (2025-09-05)
+
+
+### 🐛 Bug Fixes
+
+* 🐛 modified the permission for OIDC to include 2FA ([b19bfd0](https://github.com/SandeepK1729/jarvis/commit/b19bfd07e9d9a0a6b3b81a4aeb5ce53acbdc78eb))
+
+
+### 🔧 CI & CD
+
+* ⚙️ try removing node setup ([94fcc00](https://github.com/SandeepK1729/jarvis/commit/94fcc00d238d9bda3029d9e86acae59b24d24de8))
+
 ## [0.4.4-dev.1](https://github.com/SandeepK1729/jarvis/compare/v0.4.3...v0.4.4-dev.1) (2025-09-05)
 
 
