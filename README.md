@@ -1,5 +1,5 @@
 <p align="center">
-  <h1>Jarvis [![starline](https://starlines.qoo.monster/assets/SandeepK1729/jarvis)](https://github.com/qoomon/starline)</h1>
+  <h1>Jarvis <img width="180" src="https://starlines.qoo.monster/assets/SandeepK1729/jarvis" alt="starline logo" /></h1>
 
 
   <a href="" target="_blank" rel="noopener noreferrer">
