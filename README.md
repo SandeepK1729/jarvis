@@ -1,11 +1,3 @@
-<p align="center">
-  <h1>Jarvis <img width="180" src="https://starlines.qoo.monster/assets/SandeepK1729/jarvis" alt="starline logo" /></h1>
-
-</p>
-<br/>
-
-
-
 # Jarvis [![starline](https://starlines.qoo.monster/assets/SandeepK1729/jarvis)](https://github.com/qoomon/starline)
 
 [![CI](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml/badge.svg)](https://github.com/SandeepK1729/jarvis/actions/workflows/ci.yml)
