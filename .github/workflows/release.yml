@@ -40,7 +40,7 @@ jobs:
             ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog', '@semantic-release/git']
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If you are publishing to npm, you need to set this secret in your repository settings
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
           # This is used to set the author and committer information for semantic release commits
           # If environment variables are not set, committer will be in the name of Semantic Release Bot instead of the GitHub Actions bot
