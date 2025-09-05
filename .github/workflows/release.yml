@@ -11,7 +11,7 @@ permissions:
   packages: write
   pull-requests: write
 
-name: semantic release action
+name: Release
 
 jobs:
   release:
