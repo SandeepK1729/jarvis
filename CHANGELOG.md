@@ -1,3 +1,17 @@
+## [0.4.5](https://github.com/SandeepK1729/jarvis/compare/v0.4.4...v0.4.5) (2025-09-08)
+
+
+### Documentation
+
+* **README:** 📚 correct the error in documentation ([73a1461](https://github.com/SandeepK1729/jarvis/commit/73a1461b404777858eaecc6bc94833eaea0c427a))
+* **README:** 📚 correct the error in documentation ([4c87cb6](https://github.com/SandeepK1729/jarvis/commit/4c87cb6cc59a4d3b85dd85f48bf20484dfde9468))
+
+
+### Build
+
+* **deps-dev:** bump @types/node from 24.3.0 to 24.3.1 ([#82](https://github.com/SandeepK1729/jarvis/issues/82)) ([5556746](https://github.com/SandeepK1729/jarvis/commit/5556746a940e4280f1059c1150da059d5acdf737))
+* **deps:** bump actions/setup-node from 4 to 5 ([#81](https://github.com/SandeepK1729/jarvis/issues/81)) ([f24bdc8](https://github.com/SandeepK1729/jarvis/commit/f24bdc8cde6c039d1e1220ba25b04a4be6638b2c))
+
 ## [0.4.4](https://github.com/SandeepK1729/jarvis/compare/v0.4.3...v0.4.4) (2025-09-05)
 
 
