@@ -67,24 +67,34 @@ Commands:
 jarvis alias
 ```
 
-You will be prompted:
-- **What is the command to alias?** (e.g. `echo "hello world"`)
-- **What is the alias command?** (e.g. `hello`)
-- **Is there any specific path for the command run?** (e.g. `/Users/SandeepK1729/Projects`)
-  *(Optional - It will run in the current directory if not specified)*
+You will be prompted to enter the command, alias name, and optional execution path.
 
-**Example Interaction:**
+**Example 1: Development Server Alias**
 ```
 ◇  What is the command to alias?
-│  echo "hello world"
+│  npm run dev
 │
 ◇  What is the alias command ?
-│  hello
+│  dev
 │
 ◇  Is there any specific path for the command run? (Optional - It will run in the current directory if not specified)
-│  /Users/SandeepK1729/Projects
+│  /Users/dev/my-react-app
 │
-◇  Added alias 'hello' to run command: 'echo "hello world"'
+◇  Added alias 'dev' to run command: 'npm run dev'
+```
+
+**Example 2: Log Search Alias**
+```
+◇  What is the command to alias?
+│  grep -r "ERROR" /var/log/
+│
+◇  What is the alias command ?
+│  find-errors
+│
+◇  Is there any specific path for the command run? (Optional - It will run in the current directory if not specified)
+│  [Press enter to skip]
+│
+◇  Added alias 'find-errors' to run command: 'grep -r "ERROR" /var/log/'
 ```
 
 ---
@@ -92,19 +102,34 @@ You will be prompted:
 ### Running an Alias
 
 ```bash
-jarvis hello
+jarvis dev
 ```
 
 If a path was provided while creating the alias, the command runs in that directory; otherwise, it runs in the current working directory.
 
-**Output:**
+**Regular Output:**
 ```
 > Running command:
-> echo "hello world"
-> PID: 1234
+> npm run dev
+> PID: 5678
 
-"hello world"
+> my-react-app@1.0.0 dev
+> vite --host
+
+  VITE v4.4.0  ready in 542 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.1.100:5173/
 ```
+
+**Silent Mode (no output displayed):**
+```bash
+jarvis find-errors --silent
+# or
+jarvis find-errors -s
+```
+
+Silent mode is useful when you want to run commands in scripts or background processes without cluttering the terminal output.
 
 ---
 
@@ -116,11 +141,14 @@ jarvis list
 
 **Sample Output:**
 ```
-┌───────────┬────────────────────────────────────┬────────────────────────────────────────────────────────────────────────┐
-│ (index)   │ command                            │ path                                                                   │
-├───────────┼────────────────────────────────────┼────────────────────────────────────────────────────────────────────────┤
-│ hello     │ 'echo "hello world"'               │ '/Users/SandeepK1729/Projects'                                         │
-└───────────┴────────────────────────────────────┴────────────────────────────────────────────────────────────────────────┘
+┌─────────────┬─────────────────────────────────────────┬─────────────────────────────────────────┐
+│ (index)     │ command                                 │ path                                    │
+├─────────────┼─────────────────────────────────────────┼─────────────────────────────────────────┤
+│ dev         │ 'npm run dev'                           │ '/Users/dev/my-react-app'               │
+│ find-errors │ 'grep -r "ERROR" /var/log/'             │ undefined                               │
+│ deploy      │ 'npm run build && npm run deploy'       │ '/Users/dev/my-app'                     │
+│ logs        │ 'tail -f /var/log/app.log'              │ undefined                               │
+└─────────────┴─────────────────────────────────────────┴─────────────────────────────────────────┘
 ```
 
 ---
@@ -133,12 +161,26 @@ jarvis remove
 
 You will be prompted to select which alias(es) to delete.
 
-**Example Interaction:**
+**Example Interaction (Single Alias):**
 ```
 ◇  Select aliases to delete
-│  hello
+│  ◉ dev
+│  ◯ find-errors  
+│  ◯ deploy
+│  ◯ logs
 │
-◇  Removed alias 'hello'
+◇  Removed alias 'dev'
+```
+
+**Example Interaction (Multiple Aliases):**
+```
+◇  Select aliases to delete
+│  ◯ dev
+│  ◉ find-errors  
+│  ◉ deploy
+│  ◯ logs
+│
+◇  Removed alias 'find-errors, deploy'
 ```
 
 ### Version Check
@@ -148,6 +190,28 @@ jarvis --version
 ```
 
 This command will display the current version of Jarvis installed on your system.
+
+---
+
+## Quick Reference
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `jarvis alias` | Create a new alias | Interactive prompts guide you through setup |
+| `jarvis <alias-name>` | Run an alias | `jarvis dev` |
+| `jarvis <alias-name> --silent` | Run an alias silently | `jarvis deploy -s` |
+| `jarvis list` | Show all aliases | Displays table with command and path |
+| `jarvis remove` | Delete aliases | Interactive selection of aliases to remove |
+| `jarvis --version` | Show version | Display current Jarvis version |
+| `jarvis --help` | Show help | Display all available commands and options |
+
+### Common Use Cases
+
+- **Development Servers**: `npm run dev`, `yarn start`, `python manage.py runserver`
+- **Build & Deploy**: `npm run build && npm run deploy`, `docker build -t myapp .`
+- **Log Analysis**: `grep -r "ERROR" /var/log/`, `tail -f /var/log/app.log`
+- **System Operations**: `docker-compose up -d`, `systemctl restart nginx`
+- **Git Workflows**: `git add . && git commit -m "update" && git push`
 
 ---
 
