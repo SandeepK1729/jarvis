@@ -1,3 +1,17 @@
+## [0.4.6](https://github.com/SandeepK1729/jarvis/compare/v0.4.5...v0.4.6) (2026-01-02)
+
+
+### Documentation
+
+* **README:** 📚 add real time use cases to documentation ([2e2a2fd](https://github.com/SandeepK1729/jarvis/commit/2e2a2fd34e541f55e9236a0b97e1fa49dce5bdf9))
+
+
+### Build
+
+* **deps-dev:** bump @vercel/ncc from 0.38.3 to 0.38.4 ([#88](https://github.com/SandeepK1729/jarvis/issues/88)) ([0b96bc8](https://github.com/SandeepK1729/jarvis/commit/0b96bc892f515706a51f5e81103d39a773c603f5))
+* **deps-dev:** bump typescript from 5.9.2 to 5.9.3 ([#89](https://github.com/SandeepK1729/jarvis/issues/89)) ([c9df193](https://github.com/SandeepK1729/jarvis/commit/c9df1937535a4060f600d67d71e234c3f9fbe9f8))
+* **deps:** bump commander from 14.0.0 to 14.0.2 ([#95](https://github.com/SandeepK1729/jarvis/issues/95)) ([cdf742d](https://github.com/SandeepK1729/jarvis/commit/cdf742dd20267cf50ea7d037f05281dbfb7c5f13))
+
 ## [0.4.5](https://github.com/SandeepK1729/jarvis/compare/v0.4.4...v0.4.5) (2025-09-08)
 
 
