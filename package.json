@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/SandeepK1729/jarvis#readme",
   "devDependencies": {
-    "@types/node": "^24.3.0",
+    "@types/node": "^25.2.3",
     "@vercel/ncc": "^0.38.3",
     "typescript": "^5.9.2"
   },
