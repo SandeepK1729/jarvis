@@ -1,3 +1,6 @@
+import { ChildProcess } from "child_process";
+import { Command } from "commander";
+
 interface Alias {
   /**
    * The name of the alias
@@ -37,4 +40,30 @@ interface IData {
   }
 }
 
-export { Alias, IData };
+/** Context passed to plugins during registration */
+interface JarvisContext {
+  /** Datasource methods for managing aliases */
+  datasources: {
+    getAllAliases: () => Record<string, Alias>;
+    findAliasByName: (name: string) => Alias | undefined;
+    addAlias: (alias: Alias) => Alias;
+    deleteAliasByNames: (names: string[]) => void;
+    incrementAliasUsage: (name: string) => void;
+  };
+
+  /** Utility methods for plugins */
+  util: {
+    aliasInput: () => Promise<Alias>;
+    logAliasRun: (alias: Alias, childProcess: ChildProcess) => void;
+    selectAliasToDelete: (list: Alias[]) => Promise<string[]>;
+  };
+}
+
+/** Interface for Jarvis plugins */
+interface JarvisPlugin {
+  name: string;
+  description?: string;
+  register: (cli: Command, context: JarvisContext) => void | Promise<void>;
+}
+
+export { Alias, IData, JarvisContext, JarvisPlugin };
